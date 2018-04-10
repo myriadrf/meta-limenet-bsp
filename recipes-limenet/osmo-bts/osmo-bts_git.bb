@@ -8,11 +8,11 @@ PV = "0.7.0+git${SRCPV}"
 PR = "r0.${META_TELEPHONY_OSMO_INC}"
 S = "${WORKDIR}/git"
 
-DEPENDS = "libosmocore libosmo-abisd"
+DEPENDS = "libosmocore libosmo-abis"
 
 RDEPENDS_${PN} += "coreutils"
 
-#EXTRA_OECONF = ""
+EXTRA_OECONF = "--enable-trx"
 
 inherit autotools pkgconfig systemd
 
