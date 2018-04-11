@@ -19,6 +19,9 @@ inherit autotools pkgconfig systemd
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_AUTO_ENABLE_${PN}="enable"
 
+FILES_${PN} += "${datadir}/usrp/rev2/std_inband.rbf \
+                ${datadir}/usrp/rev4/std_inband.rbf"
+
 do_configure_prepend() {
 	ln -sf ../openbsc openbsc || true
 }
