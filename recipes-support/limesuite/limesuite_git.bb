@@ -13,3 +13,5 @@ B = "${WORKDIR}/builddir"
 DEPENDS = "sqlite3 libusb" 
 
 inherit pkgconfig cmake
+
+EXTRA_OECMAKE = "-DENABLE_SIMD_FLAGS=none"
